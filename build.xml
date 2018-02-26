@@ -26,12 +26,6 @@
                 <exclude name="**/*.java"/>
             </fileset>
         </copy>
-        <copy includeemptydirs="false" todir="target/test-classes">
-            <fileset dir="src/test/java">
-                <exclude name="**/*.launch"/>
-                <exclude name="**/*.java"/>
-            </fileset>
-        </copy>
     </target>
     <target name="clean">
         <delete dir="target/classes"/>
@@ -44,10 +38,6 @@
         <echo message="${ant.project.name}: ${ant.file}"/>
         <javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
             <src path="src/main/java"/>
-            <classpath refid="309-term3.classpath"/>
-        </javac>
-        <javac debug="true" debuglevel="${debuglevel}" destdir="target/test-classes" includeantruntime="false" source="${source}" target="${target}">
-            <src path="src/test/java"/>
             <classpath refid="309-term3.classpath"/>
         </javac>
     </target>
